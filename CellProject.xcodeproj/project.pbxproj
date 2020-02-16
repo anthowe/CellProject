@@ -81,7 +81,7 @@
 		7621329623F5CEAC0042FEEE = {
 			isa = PBXGroup;
 			children = (
-				762132A123F5CEAC0042FEEE /* CellProject */,
+				762132A123F5CEAC0042FEEE /* MainProject */,
 				762132B823F5CEAE0042FEEE /* CellProjectTests */,
 				762132C323F5CEAE0042FEEE /* CellProjectUITests */,
 				762132A023F5CEAC0042FEEE /* Products */,
@@ -98,7 +98,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		762132A123F5CEAC0042FEEE /* CellProject */ = {
+		762132A123F5CEAC0042FEEE /* MainProject */ = {
 			isa = PBXGroup;
 			children = (
 				762132A223F5CEAC0042FEEE /* AppDelegate.swift */,
@@ -109,7 +109,7 @@
 				762132B023F5CEAE0042FEEE /* Info.plist */,
 				765710B723F76D8D0021237D /* Controllers */,
 			);
-			path = CellProject;
+			path = MainProject;
 			sourceTree = "<group>";
 		};
 		762132B823F5CEAE0042FEEE /* CellProjectTests */ = {
