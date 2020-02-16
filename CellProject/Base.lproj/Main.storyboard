@@ -40,12 +40,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-za-tuG">
-                                <rect key="frame" x="152" y="312" width="88" height="38"/>
+                                <rect key="frame" x="154" y="313" width="84" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Buy Now"/>
                                 <connections>
                                     <action selector="buyNowPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1m-LZ-UxP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZL-DJ-6kr">
+                                <rect key="frame" x="154" y="170" width="84" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Buy Now"/>
+                                <connections>
+                                    <action selector="attButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDR-yE-a5l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,6 +63,7 @@
                     </view>
                     <connections>
                         <segue destination="QAI-yE-OPj" kind="presentation" identifier="goToVerizon" id="cp9-Yu-8QL"/>
+                        <segue destination="eWJ-bB-UcI" kind="presentation" identifier="goToATT" id="4ih-zP-o5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,6 +102,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDS-0Y-tBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="932" y="96"/>
+        </scene>
+        <!--Verizon View Controller-->
+        <scene sceneID="yVh-Vr-Eov">
+            <objects>
+                <viewController id="eWJ-bB-UcI" customClass="VerizonViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJm-MF-ybi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="att-3" translatesAutoresizingMaskIntoConstraints="NO" id="qod-HN-jWv">
+                                <rect key="frame" x="87" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O23-UZ-GWt">
+                                <rect key="frame" x="150" y="292" width="128" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <state key="normal" title="Buy Now"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="P5k-4x-y1Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZx-K4-a0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-605"/>
         </scene>
     </scenes>
     <resources>

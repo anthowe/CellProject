@@ -20,5 +20,8 @@ class MainViewController: UIViewController {
         self.performSegue(withIdentifier: "goToVerizon", sender: self)
     }
     
+    @IBAction func attButtonPressed(_ sender: UIButton) {
+        
+         self.performSegue(withIdentifier: "goToATT", sender: self)    }
 }
 
