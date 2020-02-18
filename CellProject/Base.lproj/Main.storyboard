@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VwI-Bn-oIP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="U8P-GO-frV">
+            <objects>
+                <viewController id="VwI-Bn-oIP" customClass="RegisterViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bQq-Sa-FLG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="3Dk-36-IcZ">
+                                <rect key="frame" x="32" y="140" width="350" height="472"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-6P-fds">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1T8-JJ-bTu">
+                                        <rect key="frame" x="0.0" y="147.5" width="350" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgF-df-rFD">
+                                        <rect key="frame" x="0.0" y="295" width="350" height="177"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="VwI-Bn-oIP" eventType="touchUpInside" id="h2E-Bb-AA3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WAT-Up-zO4" firstAttribute="bottom" secondItem="3Dk-36-IcZ" secondAttribute="bottom" constant="250" id="4IO-xb-ab7"/>
+                            <constraint firstItem="3Dk-36-IcZ" firstAttribute="top" secondItem="WAT-Up-zO4" secondAttribute="top" constant="96" id="G4K-i5-Ci1"/>
+                            <constraint firstItem="3Dk-36-IcZ" firstAttribute="leading" secondItem="WAT-Up-zO4" secondAttribute="leading" constant="32" id="Oy0-Hv-RzQ"/>
+                            <constraint firstItem="WAT-Up-zO4" firstAttribute="trailing" secondItem="3Dk-36-IcZ" secondAttribute="trailing" constant="32" id="tyy-te-peq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WAT-Up-zO4"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="RbV-6P-fds" id="kI9-MD-9JR"/>
+                        <outlet property="passwordTextField" destination="1T8-JJ-bTu" id="ye2-eP-OAI"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="registerView" id="9Zc-4R-tIY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTG-ag-eOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-568.1159420289855" y="101.78571428571428"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="verizon-2" translatesAutoresizingMaskIntoConstraints="NO" id="3gR-KV-dRf">
