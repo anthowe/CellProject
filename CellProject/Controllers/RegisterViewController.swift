@@ -11,12 +11,21 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+          let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+  
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+       
         if let email = emailTextField.text, let password = passwordTextField.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
@@ -29,9 +38,11 @@ class RegisterViewController: UIViewController {
             }
         }
     
+   
+    
 }
     
-    
+
 
 
     /*
