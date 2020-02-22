@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+        passwordTextField.isSecureTextEntry = true
     }
     @IBAction func loginPressed(_ sender: UIButton) {
         

@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController {
         
           let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+        
+        docRef = Firestore.firestore().document("sampleData/emailandpassword")
     }
   
     
@@ -24,8 +26,10 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var docRef: DocumentReference!
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-       
+        self.passwordTextField.isSecureTextEntry = true
         if let email = emailTextField.text, let password = passwordTextField.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
@@ -35,7 +39,18 @@ class RegisterViewController: UIViewController {
                         self.performSegue(withIdentifier: "registerView", sender: self)
                     }
                 }
+            //MARK - Adding db functionality
+            guard let emailText = emailTextField.text, !emailText.isEmpty else {return}
+            guard let passwordText = passwordTextField.text, !passwordText.isEmpty else {return}
+            let dataToSave: [String: Any] = ["email": emailText, "password": passwordText]
+            docRef.setData(dataToSave) { (error) in
+                if let error = error {
+                    print("error: \(error.localizedDescription)")
+                }else{
+                    print("Data is saved")
+                }
             }
+        }
         }
     
    
