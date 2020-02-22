@@ -11,13 +11,20 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
+    let db = Firestore.firestore()
+    
+    var data: [DataToStore] = [DataToStore(email: "")]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
           let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
         
-        db = Firestore.firestore().document("sampleData/emailandpassword")
+        //MARK - not sure I need
+        // db = Firestore.firestore().document("sampleData/emailandpassword")
+        
     }
   
     
@@ -26,7 +33,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var db: DocumentReference!
+    //var db: DocumentReference!
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         self.passwordTextField.isSecureTextEntry = true
@@ -40,16 +47,19 @@ class RegisterViewController: UIViewController {
                     }
                 }
             //MARK - Adding db functionality
-            guard let emailText = emailTextField.text, !emailText.isEmpty else {return}
-            guard let passwordText = passwordTextField.text, !passwordText.isEmpty else {return}
-            let dataToSave: [String: Any] = ["email": emailText, "password": passwordText]
-            db.setData(dataToSave) { (error) in
-                if let error = error {
-                    print("error: \(error.localizedDescription)")
-                }else{
-                    print("Data is saved")
+            if let emailText = Auth.auth().currentUser?.email{
+                db.collection(K.FStore.email).addDocument(data: [K.FStore.email: emailText]) { (error) in
+                    if let e = error {
+                        print("There was an issue saving data to Firestore: \(e)")
+                    }else{
+                        print("Successfully saved data")
+                    }
                 }
             }
+            //!emailText.isEmpty else {return}
+            //guard let passwordText = passwordTextField.text, !passwordText.isEmpty else {return}
+            //let dataToSave: [String: Any] = ["email": emailText]
+            //db.collection(K.FStore.email)
        
         }
         }
