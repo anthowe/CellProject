@@ -23,7 +23,7 @@ class VerizonViewController: UIViewController {
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
-        if let url = URL(string: "https://www.mcssl.com/SecureCart/ViewCart.aspx?mid=209392A5-30C3-4728-8AAB-EA3905A0F1D6&sctoken=77a64cff55af4193bbeda0f11da9974a&bhjs=1&bhqs=1") {
+        if let url = URL(string: "https://www.myugoonline.net/113866") {
             UIApplication.shared.open(url)
         }
         
