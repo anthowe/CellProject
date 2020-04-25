@@ -99,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.54872296392139774" green="0.78039215689999997" blue="0.27053354765965759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4Cm-oB-Ioi" firstAttribute="top" secondItem="pcM-C2-1Hy" secondAttribute="top" constant="40" id="3Dc-Kd-bgB"/>
                             <constraint firstItem="pcM-C2-1Hy" firstAttribute="trailing" secondItem="5QS-9Z-yGU" secondAttribute="trailing" constant="20" id="7hB-dF-j27"/>
@@ -181,7 +181,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,7 +284,7 @@
         <!--Verizon View Controller-->
         <scene sceneID="GUI-DF-80N">
             <objects>
-                <viewController id="QAI-yE-OPj" customClass="VerizonViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="QAI-yE-OPj" customClass="VerizonViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ATt-LU-Ka4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
