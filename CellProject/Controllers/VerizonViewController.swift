@@ -20,6 +20,7 @@ class VerizonViewController: UIViewController {
        
     }
    
+   
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
