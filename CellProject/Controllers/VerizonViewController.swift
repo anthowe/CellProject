@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SwiftUI
 
 class VerizonViewController: UIViewController {
+
 
     @IBOutlet weak var verizonImage: UIImageView!
     
@@ -20,7 +22,10 @@ class VerizonViewController: UIViewController {
        
     }
    
-   
+    @IBAction func showFirstViewController(_ sender: Any) {
+        performSegue(withIdentifier: "goBack", sender: self)
+    }
+    
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
