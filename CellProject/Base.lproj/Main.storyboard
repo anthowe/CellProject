@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p18-se-Vny">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-FZ-dah">
-                                <rect key="frame" x="20" y="118" width="374" height="46"/>
+                                <rect key="frame" x="20" y="74" width="374" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-I7-vkK">
-                                <rect key="frame" x="20" y="194" width="374" height="45.5"/>
+                                <rect key="frame" x="20" y="150" width="374" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-9i-tcu">
-                                <rect key="frame" x="20" y="269.5" width="374" height="48"/>
+                                <rect key="frame" x="20" y="225.5" width="374" height="48"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Log In">
@@ -55,7 +56,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="RbF-FZ-dah" id="iL5-DZ-lCG"/>
                         <outlet property="passwordTextField" destination="Ifq-I7-vkK" id="unZ-59-kvH"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginView" modalPresentationStyle="fullScreen" id="65I-B5-YaK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsA-4R-gbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-9Z-yGU">
-                                <rect key="frame" x="20" y="196.5" width="374" height="48"/>
+                                <rect key="frame" x="20" y="189.5" width="374" height="48"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Register">
@@ -81,25 +81,37 @@
                                     <action selector="registerButtonPressed:" destination="onZ-Xq-VCR" eventType="touchUpInside" id="OiZ-N0-6ez"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-qi-RFa">
-                                <rect key="frame" x="20" y="274.5" width="374" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-qi-RFa">
+                                <rect key="frame" x="20" y="514" width="374" height="48"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInPressed:" destination="onZ-Xq-VCR" eventType="touchUpInside" id="7D1-UJ-Tfp"/>
+                                    <action selector="logInPressed:" destination="onZ-Xq-VCR" eventType="touchUpInside" id="kbg-2w-RsR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount Prepaid Cellular" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cm-oB-Ioi">
-                                <rect key="frame" x="20" y="128" width="374" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCOUNT PREPAID CELLULAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cm-oB-Ioi">
+                                <rect key="frame" x="20" y="128" width="374" height="31.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="27"/>
+                                <color key="textColor" red="0.98004371759999998" green="0.98004371759999998" blue="0.98004371759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dW3-bt-9Aj">
+                                <rect key="frame" x="20" y="285" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="Ogx-kT-1dT">
+                                <rect key="frame" x="20" y="349" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.54872296392139774" green="0.78039215689999997" blue="0.27053354765965759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="LightGreenCustom"/>
                         <constraints>
                             <constraint firstItem="4Cm-oB-Ioi" firstAttribute="top" secondItem="pcM-C2-1Hy" secondAttribute="top" constant="40" id="3Dc-Kd-bgB"/>
                             <constraint firstItem="pcM-C2-1Hy" firstAttribute="trailing" secondItem="5QS-9Z-yGU" secondAttribute="trailing" constant="20" id="7hB-dF-j27"/>
@@ -115,14 +127,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="nEP-6z-MHR"/>
                     <connections>
-                        <segue destination="VwI-Bn-oIP" kind="show" identifier="registerView" id="hJP-vJ-BiN"/>
-                        <segue destination="uI3-IM-2Mm" kind="show" identifier="logInView" id="iik-Ek-ufo"/>
+                        <outlet property="emailTextField" destination="dW3-bt-9Aj" id="zbD-zT-SjL"/>
+                        <outlet property="passwordTextField" destination="Ogx-kT-1dT" id="cPz-Lk-Zr6"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="alreadyLoggedIn" modalPresentationStyle="fullScreen" id="K3d-g5-9d8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aW-I1-GjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-464" y="417"/>
+            <point key="canvasLocation" x="-465.21739130434787" y="416.51785714285711"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="U8P-GO-frV">
@@ -133,12 +145,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1T8-JJ-bTu">
-                                <rect key="frame" x="20" y="194" width="374" height="46"/>
+                                <rect key="frame" x="20" y="150" width="374" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgF-df-rFD">
-                                <rect key="frame" x="20" y="270" width="374" height="48"/>
+                                <rect key="frame" x="20" y="226" width="374" height="48"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Register">
@@ -149,7 +161,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-6P-fds">
-                                <rect key="frame" x="20" y="118" width="374" height="46"/>
+                                <rect key="frame" x="20" y="74" width="374" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -172,7 +184,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="RbV-6P-fds" id="kI9-MD-9JR"/>
                         <outlet property="passwordTextField" destination="1T8-JJ-bTu" id="ye2-eP-OAI"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="registerView" modalPresentationStyle="fullScreen" id="9Zc-4R-tIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTG-ag-eOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -385,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZx-K4-a0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4210.144927536232" y="-514.28571428571422"/>
+            <point key="canvasLocation" x="3457" y="-429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xfA-eh-dQ5">
@@ -395,6 +406,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hsG-J3-spw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="LightGreenCustom"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -413,8 +425,11 @@
         <image name="page-plus-2" width="87" height="94"/>
         <image name="tracfone.jpg" width="249" height="113"/>
         <image name="verizon-2" width="230" height="219"/>
+        <namedColor name="LightGreenCustom">
+            <color red="0.60863054282555451" green="0.77999997138977051" blue="0.54158955154981014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZFu-4M-iOB"/>
+        <segue reference="K3d-g5-9d8"/>
     </inferredMetricsTieBreakers>
 </document>
