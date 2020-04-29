@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
                        print(e)
                     } else {
                         //Navigate to the ChatViewController
-                        self.performSegue(withIdentifier: "registerView", sender: self)
+                        self.performSegue(withIdentifier: "goToMainSegue", sender: self)
                     }
                 }
             //MARK - Adding db functionality

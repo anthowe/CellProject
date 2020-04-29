@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
 
@@ -18,7 +19,17 @@ class MainViewController: UIViewController {
         navigationItem.title="Root View"
     }
   
-
+    @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        do {
+                 try Auth.auth().signOut()
+                 navigationController?.popToRootViewController(animated: true)
+                 
+             } catch let signOutError as NSError {
+               print ("Error signing out: %@", signOutError)
+             }
+        
+    }
+    
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
         self.performSegue(withIdentifier: "goToVerizon", sender: self)
