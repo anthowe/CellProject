@@ -11,24 +11,15 @@ import Firebase
 
 class MainViewController: UIViewController {
 
-   
+   var leftBarButtonItem : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationItem.title="Root View"
+       // navigationItem.title="Root View"
+        self.leftBarButtonItem = UIBarButtonItem(title: "test", style:         UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
-  
-    @IBAction func logOutButtonPressed(_ sender: UIButton) {
-        do {
-                 try Auth.auth().signOut()
-                 navigationController?.popToRootViewController(animated: true)
-                 
-             } catch let signOutError as NSError {
-               print ("Error signing out: %@", signOutError)
-             }
-        
-    }
+
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
@@ -37,6 +28,19 @@ class MainViewController: UIViewController {
     
     @IBAction func attButtonPressed(_ sender: UIButton) {
         
-         self.performSegue(withIdentifier: "goToATT", sender: self)    }
+         self.performSegue(withIdentifier: "goToATT", sender: self)
+        
+    }
+    
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        print("Log Out Pressed")
+        do{
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        }catch let signOutError as NSError{
+            print("Error signing out: %@", signOutError)
+        }
+        
+    }
 }
 
