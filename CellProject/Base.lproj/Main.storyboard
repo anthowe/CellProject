@@ -199,10 +199,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="att-3" translatesAutoresizingMaskIntoConstraints="NO" id="60s-Sx-U2r" userLabel="attImageClickable">
-                                <rect key="frame" x="5" y="93" width="404" height="110"/>
+                                <rect key="frame" x="5" y="93" width="404" height="55"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZL-DJ-6kr">
-                                <rect key="frame" x="5" y="213" width="404" height="36"/>
+                                <rect key="frame" x="5" y="158" width="404" height="36"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Buy Now">
@@ -213,13 +213,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verizon-2" translatesAutoresizingMaskIntoConstraints="NO" id="3gR-KV-dRf">
-                                <rect key="frame" x="5" y="269" width="404" height="90"/>
+                                <rect key="frame" x="5" y="214" width="404" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="0ar-r8-aCY"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-za-tuG">
-                                <rect key="frame" x="5" y="369" width="404" height="36"/>
+                                <rect key="frame" x="5" y="314" width="404" height="36"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Buy Now">
@@ -229,18 +229,25 @@
                                     <action selector="buyNowPressed:" destination="aCf-03-gMJ" eventType="touchUpInside" id="x26-4c-b8v"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tracfone.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8nn-Zo-HLh">
-                                <rect key="frame" x="5" y="425" width="404" height="98"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Ae-is5">
+                                <rect key="frame" x="20" y="399" width="374" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="OQu-Gi-duI"/>
+                                    <constraint firstAttribute="height" constant="47" id="8an-S6-X2c"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lyca-2" translatesAutoresizingMaskIntoConstraints="NO" id="5vF-Db-lxb">
-                                <rect key="frame" x="5" y="543" width="404" height="109"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="Ey7-AH-p81"/>
-                                </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc6-tl-Fmr">
+                                <rect key="frame" x="20" y="680" width="384" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="aCf-03-gMJ" eventType="touchUpInside" id="SYf-je-Hyo"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXY-kW-Zjb">
+                                <rect key="frame" x="10" y="456" width="394" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -248,19 +255,22 @@
                             <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="z2F-za-tuG" secondAttribute="trailing" constant="5" id="6NT-a0-NDD"/>
                             <constraint firstItem="60s-Sx-U2r" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="8Ir-jm-0NZ"/>
                             <constraint firstItem="z2F-za-tuG" firstAttribute="top" secondItem="3gR-KV-dRf" secondAttribute="bottom" constant="10" id="B9w-Yk-AdP"/>
-                            <constraint firstItem="5vF-Db-lxb" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="D4C-he-PMS"/>
                             <constraint firstItem="3gR-KV-dRf" firstAttribute="top" secondItem="iZL-DJ-6kr" secondAttribute="bottom" constant="20" id="DBX-eb-a9B"/>
                             <constraint firstItem="iZL-DJ-6kr" firstAttribute="top" secondItem="60s-Sx-U2r" secondAttribute="bottom" constant="10" id="FQa-gK-lYl"/>
-                            <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="5vF-Db-lxb" secondAttribute="trailing" constant="5" id="JnR-QW-A2G"/>
+                            <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="JXY-kW-Zjb" secondAttribute="trailing" constant="10" id="H4Y-aG-GTl"/>
+                            <constraint firstItem="JXY-kW-Zjb" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="10" id="Icm-O0-po8"/>
                             <constraint firstItem="z2F-za-tuG" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="M4s-o6-4Pp"/>
+                            <constraint firstItem="anh-Ae-is5" firstAttribute="leading" secondItem="Mmy-AB-a2c" secondAttribute="leadingMargin" id="MIf-hM-Yu5"/>
                             <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="3gR-KV-dRf" secondAttribute="trailing" constant="5" id="NDF-1N-KEW"/>
                             <constraint firstItem="iZL-DJ-6kr" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="Nbl-Af-cI8"/>
                             <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="iZL-DJ-6kr" secondAttribute="trailing" constant="5" id="Ntc-rF-1UL"/>
-                            <constraint firstItem="8nn-Zo-HLh" firstAttribute="top" secondItem="z2F-za-tuG" secondAttribute="bottom" constant="20" id="WRB-9N-Far"/>
+                            <constraint firstItem="sc6-tl-Fmr" firstAttribute="trailing" secondItem="JXY-kW-Zjb" secondAttribute="trailing" id="U3f-Zg-UsJ"/>
+                            <constraint firstItem="sc6-tl-Fmr" firstAttribute="top" secondItem="JXY-kW-Zjb" secondAttribute="bottom" constant="8" id="YTH-av-Fyg"/>
                             <constraint firstItem="60s-Sx-U2r" firstAttribute="top" secondItem="S4Y-He-AbG" secondAttribute="top" constant="5" id="b8V-uK-ZBY"/>
-                            <constraint firstItem="8nn-Zo-HLh" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="bP3-ak-FCv"/>
-                            <constraint firstItem="5vF-Db-lxb" firstAttribute="top" secondItem="8nn-Zo-HLh" secondAttribute="bottom" constant="20" id="cPD-hd-NFp"/>
-                            <constraint firstItem="S4Y-He-AbG" firstAttribute="trailing" secondItem="8nn-Zo-HLh" secondAttribute="trailing" constant="5" id="iKD-1u-tV1"/>
+                            <constraint firstItem="anh-Ae-is5" firstAttribute="centerX" secondItem="z2F-za-tuG" secondAttribute="centerX" id="hSB-5g-NWN"/>
+                            <constraint firstItem="JXY-kW-Zjb" firstAttribute="top" secondItem="anh-Ae-is5" secondAttribute="bottom" constant="10" id="iMt-PO-7Ey"/>
+                            <constraint firstItem="sc6-tl-Fmr" firstAttribute="leading" secondItem="anh-Ae-is5" secondAttribute="leading" id="rNv-nF-Tr1"/>
+                            <constraint firstItem="anh-Ae-is5" firstAttribute="top" secondItem="z2F-za-tuG" secondAttribute="bottom" constant="49" id="s2j-VP-xpp"/>
                             <constraint firstItem="3gR-KV-dRf" firstAttribute="leading" secondItem="S4Y-He-AbG" secondAttribute="leading" constant="5" id="vgd-7B-6sn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S4Y-He-AbG"/>
@@ -273,18 +283,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailLabel" destination="anh-Ae-is5" id="8mo-CQ-KEt"/>
+                        <outlet property="pickerView" destination="JXY-kW-Zjb" id="FvO-5f-Oe8"/>
                         <segue destination="eWJ-bB-UcI" kind="show" identifier="goToATT" id="nmz-mv-EBh"/>
                         <segue destination="QAI-yE-OPj" kind="show" identifier="goToVerizon" id="dJl-xm-iyZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVd-Z9-O1q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="419"/>
+            <point key="canvasLocation" x="1731.8840579710147" y="418.52678571428572"/>
         </scene>
         <!--Carrier View Controller-->
         <scene sceneID="GUI-DF-80N">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="QAI-yE-OPj" customClass="CarrierViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="carrierViewController" wantsFullScreenLayout="YES" id="QAI-yE-OPj" customClass="CarrierViewController" customModule="CellProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ATt-LU-Ka4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,8 +401,6 @@
     <resources>
         <image name="att-3" width="128" height="55"/>
         <image name="dog" width="540" height="281"/>
-        <image name="lyca-2" width="398" height="220"/>
-        <image name="tracfone.jpg" width="249" height="113"/>
         <image name="verizon-2" width="230" height="219"/>
         <namedColor name="LightGreenCustom">
             <color red="0.60900002717971802" green="0.77999997138977051" blue="0.54199999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
