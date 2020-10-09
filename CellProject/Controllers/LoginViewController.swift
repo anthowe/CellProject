@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
             if let e = error{
                 print(e)
             }else{
-                self.performSegue(withIdentifier: "goToMainSegue", sender: self)
+                self.performSegue(withIdentifier: "costSavingsSegue", sender: self)
             }
             
             }

@@ -11,7 +11,7 @@ import Firebase
 
 class MainViewController: UIViewController {
     
-private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca"]
+private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boost"]
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var detailLabel: UILabel!
@@ -67,9 +67,12 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         detailLabel.text = dataSource[row]
-        if row == 0 {
-            let vcOne = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
-            present(vcOne, animated: true, completion: nil)
+        if row == 0 {  if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
+                      UIApplication.shared.open(url)
+                  }
+            
+//            let vcOne = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
+            //present( <#UIViewController#>, animated: true, completion: nil)
             // first selection, initialize the VC related with it
         } else if row == 1 {
             let vcTwo = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
