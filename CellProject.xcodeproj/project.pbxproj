@@ -158,12 +158,13 @@
 				762132A223F5CEAC0042FEEE /* AppDelegate.swift */,
 				762132A423F5CEAC0042FEEE /* SceneDelegate.swift */,
 				762132A823F5CEAC0042FEEE /* Main.storyboard */,
+				76A3086E2531E3A000A4394F /* Carriers */,
+				765710B723F76D8D0021237D /* Controllers */,
 				76107EC424015DAC0053003D /* Models */,
 				762132AB23F5CEAE0042FEEE /* Assets.xcassets */,
 				762132AD23F5CEAE0042FEEE /* LaunchScreen.storyboard */,
 				762132B023F5CEAE0042FEEE /* Info.plist */,
 				76BF74A723FC2D0000A69EBA /* GoogleService-Info.plist */,
-				765710B723F76D8D0021237D /* Controllers */,
 			);
 			path = CellProject;
 			sourceTree = "<group>";
@@ -172,14 +173,21 @@
 			isa = PBXGroup;
 			children = (
 				762132A623F5CEAC0042FEEE /* MainViewController.swift */,
-				765710B523F76D860021237D /* CarrierViewController.swift */,
 				76A9BF2B23FC4C6800E07DBE /* RegisterViewController.swift */,
 				76107EC5240162820053003D /* Constants.swift */,
 				76F412A023FCB35400C54A2C /* WelcomeViewController.swift */,
 				76F412A223FCB36600C54A2C /* LoginViewController.swift */,
-				76DF0626252B6A35003972D6 /* CostSavingsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76A3086E2531E3A000A4394F /* Carriers */ = {
+			isa = PBXGroup;
+			children = (
+				76DF0626252B6A35003972D6 /* CostSavingsViewController.swift */,
+				765710B523F76D860021237D /* CarrierViewController.swift */,
+			);
+			path = Carriers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

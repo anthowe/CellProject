@@ -11,6 +11,8 @@ import SwiftUI
 
 class CarrierViewController: UIViewController {
 
+    
+    private var percentSave: Double = 0.0
 
     @IBOutlet weak var verizonImage: UIImageView!
     
@@ -23,13 +25,35 @@ class CarrierViewController: UIViewController {
     }
    
 
+    @IBOutlet weak var newCostLabel: UILabel!
     
     
+    @IBOutlet weak var chooseAmountLabel: UILabel!
+  
     @IBAction func buyNowPressed(_ sender: UIButton) {
+        
+        computeCostSavings()
         
         if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
             UIApplication.shared.open(url)
         }
+        
+    }
+    
+    func computeCostSavings(){
+       // let newCost = Double(enterCostTextField.text!)
+      //  let tipPercentages = [0.18, 0.2, 0.25]
+            
+      //  chooseCarrier()
+         let cost = Double(chooseAmountLabel.text!) ?? 0
+                // let percentSave = Double(chooseCarrierLabel.text!) ?? 0
+                let savings = cost * percentSave //[tipControl.selectedSegmentIndex]
+                let total = cost - savings
+      
+      
+        chooseAmountLabel.text =   String(format: "%.0f", percentSave * 100.0)
+        newCostLabel.text = String(format: "$%.2f", total)
+        
         
     }
     
@@ -43,4 +67,5 @@ class CarrierViewController: UIViewController {
     }
     */
 
+    
 }
