@@ -11,7 +11,7 @@ import Firebase
 
 class MainViewController: UIViewController {
     
-private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boost"]
+    private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boost"]
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var detailLabel: UILabel!
@@ -20,13 +20,13 @@ private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       // navigationItem.title="Root View"
+        // navigationItem.title="Root View"
         self.leftBarButtonItem = UIBarButtonItem(title: "test", style:         UIBarButtonItem.Style.plain, target: nil, action: nil)
         pickerView.delegate = self
         pickerView.dataSource = self
         
     }
-
+    
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
@@ -35,7 +35,7 @@ private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boo
     
     @IBAction func attButtonPressed(_ sender: UIButton) {
         
-         self.performSegue(withIdentifier: "goToATT", sender: self)
+        self.performSegue(withIdentifier: "goToATT", sender: self)
         
     }
     
@@ -49,11 +49,11 @@ private let dataSource = ["AT&T", "Verizon", "Tracfone", "Lyca", "TMobile", "Boo
         }
         
     }
-  
+    
     @IBAction func donePressed(_ sender: Any) {
         
-      
-
+        
+        
     }
     
 }
@@ -67,23 +67,31 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         detailLabel.text = dataSource[row]
-        if row == 0 {  if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
-                      UIApplication.shared.open(url)
-                  }
-            
-//            let vcOne = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
-            //present( <#UIViewController#>, animated: true, completion: nil)
+        if row == 0 {  let vcOne = storyboard?.instantiateViewController(withIdentifier: "aTTViewController") as! CarrierViewController
+            present( vcOne, animated: true, completion: nil)
             // first selection, initialize the VC related with it
-        } else if row == 1 {
-            let vcTwo = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
+        }
+            
+            
+        else if row == 1 {
+            let vcTwo = storyboard?.instantiateViewController(withIdentifier: "verizonViewController") as! CarrierViewController
             present(vcTwo, animated: true, completion: nil)
+            // second selection, initialize the VC related with it
+        } 
+    
+       else if row == 2 {
+            let vcThree = storyboard?.instantiateViewController(withIdentifier: "tracfoneViewController") as! TracfoneViewController
+            present(vcThree, animated: true, completion: nil)
             // second selection, initialize the VC related with it
         } else {
             // other selections, you get the idea, you can also do switch-case
         }
     }
+
+
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
     }
-  }
+}
 

@@ -67,7 +67,7 @@ class CostSavingsViewController: UIViewController{
        
         if (chooseCarrierLabel.text == "AT&T"){
             percentSave = 0.15
-            let vcOne = storyboard?.instantiateViewController(withIdentifier: "carrierViewController") as! CarrierViewController
+            let vcOne = storyboard?.instantiateViewController(withIdentifier: "aTTViewController") as! CarrierViewController
             present( vcOne, animated:true , completion: nil)
          
         }

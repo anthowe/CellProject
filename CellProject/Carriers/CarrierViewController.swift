@@ -10,29 +10,32 @@ import UIKit
 import SwiftUI
 
 class CarrierViewController: UIViewController {
-
+    
     
     private var percentSave: Double = 0.0
-
-    @IBOutlet weak var verizonImage: UIImageView!
+    
+   
     
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
-
-       
+        
+        
     }
-   
-
-    @IBOutlet weak var newCostLabel: UILabel!
     
     
-    @IBOutlet weak var chooseAmountLabel: UILabel!
-  
+    
+    
+    @IBOutlet weak var newCostTextField: UITextField!
+    
+    @IBOutlet weak var chooseAmountTextField: UITextField!
+    
+    
+    
     @IBAction func buyNowPressed(_ sender: UIButton) {
         
-        computeCostSavings()
+        
         
         if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
             UIApplication.shared.open(url)
@@ -40,32 +43,35 @@ class CarrierViewController: UIViewController {
         
     }
     
+    @IBAction func enterPressed(_ sender: Any) {
+        computeCostSavings()
+    }
     func computeCostSavings(){
-       // let newCost = Double(enterCostTextField.text!)
-      //  let tipPercentages = [0.18, 0.2, 0.25]
-            
-      //  chooseCarrier()
-         let cost = Double(chooseAmountLabel.text!) ?? 0
-                // let percentSave = Double(chooseCarrierLabel.text!) ?? 0
-                let savings = cost * percentSave //[tipControl.selectedSegmentIndex]
-                let total = cost - savings
-      
-      
-        chooseAmountLabel.text =   String(format: "%.0f", percentSave * 100.0)
-        newCostLabel.text = String(format: "$%.2f", total)
+        
+        percentSave = 0.08
+        let cost = Double(chooseAmountTextField.text!) ?? 0
+        
+        let savings = cost * percentSave
+        let total = cost - savings
+        
+        
+        
+        newCostTextField.text = String(format: "$%.2f", total)
         
         
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     
 }
+
+

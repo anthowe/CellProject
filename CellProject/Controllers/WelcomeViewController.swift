@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "costSavingsSegue", sender: nil)
+            self.performSegue(withIdentifier: "goToCarrierPicker", sender: nil)
         }
     }
 

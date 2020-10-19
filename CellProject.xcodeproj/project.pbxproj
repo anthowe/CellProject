@@ -16,8 +16,10 @@
 		762132AC23F5CEAE0042FEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762132AB23F5CEAE0042FEEE /* Assets.xcassets */; };
 		762132AF23F5CEAE0042FEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762132AD23F5CEAE0042FEEE /* LaunchScreen.storyboard */; };
 		765710B623F76D860021237D /* CarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765710B523F76D860021237D /* CarrierViewController.swift */; };
+		7661852F25333A0E00561B11 /* TracfoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661852E25333A0E00561B11 /* TracfoneViewController.swift */; };
 		76A9BF2D23FC4C6800E07DBE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9BF2B23FC4C6800E07DBE /* RegisterViewController.swift */; };
 		76BF74A823FC2D0000A69EBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76BF74A723FC2D0000A69EBA /* GoogleService-Info.plist */; };
+		76DB1694253206D6001C2609 /* VerizonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB1693253206D6001C2609 /* VerizonViewController.swift */; };
 		76DF0627252B6A35003972D6 /* CostSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DF0626252B6A35003972D6 /* CostSavingsViewController.swift */; };
 		76F412A123FCB35400C54A2C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F412A023FCB35400C54A2C /* WelcomeViewController.swift */; };
 		76F412A323FCB36600C54A2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F412A223FCB36600C54A2C /* LoginViewController.swift */; };
@@ -60,8 +62,10 @@
 		762132B523F5CEAE0042FEEE /* CellProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		762132C023F5CEAE0042FEEE /* CellProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CellProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		765710B523F76D860021237D /* CarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierViewController.swift; sourceTree = "<group>"; };
+		7661852E25333A0E00561B11 /* TracfoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracfoneViewController.swift; sourceTree = "<group>"; };
 		76A9BF2B23FC4C6800E07DBE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76BF74A723FC2D0000A69EBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76DB1693253206D6001C2609 /* VerizonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerizonViewController.swift; sourceTree = "<group>"; };
 		76DF0626252B6A35003972D6 /* CostSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostSavingsViewController.swift; sourceTree = "<group>"; };
 		76F412A023FCB35400C54A2C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		76F412A223FCB36600C54A2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			children = (
 				76DF0626252B6A35003972D6 /* CostSavingsViewController.swift */,
 				765710B523F76D860021237D /* CarrierViewController.swift */,
+				76DB1693253206D6001C2609 /* VerizonViewController.swift */,
+				7661852E25333A0E00561B11 /* TracfoneViewController.swift */,
 			);
 			path = Carriers;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DB1694253206D6001C2609 /* VerizonViewController.swift in Sources */,
 				76F412A323FCB36600C54A2C /* LoginViewController.swift in Sources */,
 				762132A723F5CEAC0042FEEE /* MainViewController.swift in Sources */,
 				76A9BF2D23FC4C6800E07DBE /* RegisterViewController.swift in Sources */,
@@ -437,6 +444,7 @@
 				76F412A123FCB35400C54A2C /* WelcomeViewController.swift in Sources */,
 				765710B623F76D860021237D /* CarrierViewController.swift in Sources */,
 				76107EC324015DA50053003D /* DataToStore.swift in Sources */,
+				7661852F25333A0E00561B11 /* TracfoneViewController.swift in Sources */,
 				762132A523F5CEAC0042FEEE /* SceneDelegate.swift in Sources */,
 				76107EC6240162820053003D /* Constants.swift in Sources */,
 				76DF0627252B6A35003972D6 /* CostSavingsViewController.swift in Sources */,
