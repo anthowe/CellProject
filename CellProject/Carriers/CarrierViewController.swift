@@ -14,42 +14,52 @@ class CarrierViewController: UIViewController {
     
     private var percentSave: Double = 0.0
     
-   
+    private var chooseAmountTextField: Double = 0.0
+    
+    private let dataSource = ["10", "25"]
+  
+    @IBOutlet weak var pickerView: UIPickerView!
     
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
         
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
         
     }
     
-    
+ 
     
     
     @IBOutlet weak var newCostTextField: UITextField!
     
-    @IBOutlet weak var chooseAmountTextField: UITextField!
+
     
     
     
     @IBAction func buyNowPressed(_ sender: UIButton) {
+     
+            
+            
+            if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
+                UIApplication.shared.open(url)
+            }
         
-        
-        
-        if let url = URL(string: "https://discountedcellularprepaidrefills.com") {
-            UIApplication.shared.open(url)
         }
         
-    }
+        
+        
+        
+        
     
-    @IBAction func enterPressed(_ sender: Any) {
-        computeCostSavings()
-    }
+
     func computeCostSavings(){
         
         percentSave = 0.08
-        let cost = Double(chooseAmountTextField.text!) ?? 0
+        let cost = chooseAmountTextField
         
         let savings = cost * percentSave
         let total = cost - savings
@@ -61,6 +71,11 @@ class CarrierViewController: UIViewController {
         
     }
     
+
+    func dismissKeyboard(){
+          
+          self.view.endEditing(false)
+    }
     /*
      // MARK: - Navigation
      
@@ -74,4 +89,39 @@ class CarrierViewController: UIViewController {
     
 }
 
+
+extension CarrierViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
+    }
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        newCostTextField.text = dataSource[row]
+        if row == 0 { return
+            // first selection, initialize the VC related with it
+        }
+            
+            
+        else if row == 1 {
+            return
+            // second selection, initialize the VC related with it
+        }
+    
+       else if row == 2 {
+            return
+            // second selection, initialize the VC related with it
+        } else {
+            // other selections, you get the idea, you can also do switch-case
+        }
+    }
+
+
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
+    }
+}
 
